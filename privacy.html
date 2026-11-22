@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>개인정보처리방침 — lifelongeek agent team</title>
+<meta name="description" content="lifelongeek agent team 개인정보처리방침. Google 사용자 데이터의 수집·이용·보관·삭제 방침과 Limited Use 준수 사항.">
+<link rel="icon" href="logo.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="site">
+  <img src="logo.png" alt="lifelongeek agent team 로고">
+  <div>
+    <h1>개인정보처리방침</h1>
+    <p>lifelongeek agent team · 시행일 2026-11-22</p>
+  </div>
+</header>
+
+<nav class="top">
+  <a href="index.html">홈</a>
+  <a href="terms.html">서비스 약관</a>
+</nav>
+
+<div class="card">
+  <h2>1. 운영자와 적용 범위</h2>
+  <p>이 방침은 개인이 만들어 개인 컴퓨터에서 운영하는 애플리케이션 <strong>lifelongeek agent team</strong>(이하 "이 앱")에 적용됩니다.</p>
+  <ul>
+    <li>운영자 겸 개발자: 김건민 (ken.geonmin.kim@gmail.com)</li>
+    <li>이 앱은 일반에 공개된 서비스가 아니며, 회원가입 기능이 없습니다.</li>
+    <li>이용자는 운영자 본인 한 사람이고, 연결되는 Google 계정도 운영자 본인의 계정 하나뿐입니다.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h2>2. 요청하는 권한과 사용 목적</h2>
+  <p>이 앱은 아래 네 가지 범위만 요청하며, 각 범위를 아래 목적 외에는 사용하지 않습니다.</p>
+  <table>
+    <tr><th>범위</th><th>사용 목적</th></tr>
+    <tr>
+      <td><code>gmail.readonly</code></td>
+      <td>이용자가 메일에 대해 물었을 때 해당하는 메일을 검색해 읽고 요약하거나, 답장 초안을 쓰기 전에 원문을 확인합니다.</td>
+    </tr>
+    <tr>
+      <td><code>gmail.compose</code></td>
+      <td>이용자가 답장을 요청하면 Gmail 임시보관함에 초안으로 저장합니다. 발송은 하지 않습니다.</td>
+    </tr>
+    <tr>
+      <td><code>calendar.readonly</code></td>
+      <td>하루 브리핑과 일정 조회 응답을 만듭니다.</td>
+    </tr>
+    <tr>
+      <td><code>calendar.events</code></td>
+      <td>이용자가 직접 등록·수정을 요청한 경우에만 일정을 만들거나 고칩니다.</td>
+    </tr>
+  </table>
+  <div class="note">
+    더 넓은 권한(<code>gmail.send</code>, <code>gmail.modify</code>, 일정 삭제 등)은 요청하지 않으며, 해당 기능 자체를 구현하지 않았습니다.
+  </div>
+</div>
+
+<div class="card">
+  <h2>3. 처리하는 정보</h2>
+  <ul>
+    <li><strong>Gmail</strong> — 이용자의 질문과 관련된 메일의 보낸사람·제목·날짜·본문 일부(스레드당 최대 12,000자)</li>
+    <li><strong>Google Calendar</strong> — 조회 기간에 해당하는 일정의 제목·시간·장소·설명</li>
+    <li><strong>계정 식별 정보</strong> — 연결된 Google 계정의 이메일 주소(화면에 연결 상태를 보여주기 위해)</li>
+    <li><strong>OAuth 토큰</strong> — 액세스 토큰과 갱신 토큰</li>
+  </ul>
+  <p>이 앱은 광고 식별자, 위치 정보, 연락처 목록을 수집하지 않습니다.</p>
+</div>
+
+<div class="card">
+  <h2>4. 보관 위치와 기간</h2>
+  <ul>
+    <li>모든 자료는 운영자의 개인 컴퓨터(macOS) 안에서만 처리합니다. 외부 서버나 클라우드 데이터베이스에 저장하지 않습니다.</li>
+    <li>OAuth 토큰은 <code>data/google/token.json</code> 파일에 <strong>소유자만 읽고 쓸 수 있는 권한(0600)</strong>으로 저장합니다.</li>
+    <li>메일 본문과 일정 내용은 답변을 만드는 동안에만 사용하며, 별도의 사본을 보관하지 않습니다. 화면에 남는 대화 기록에는 에이전트가 만든 답변 글이 포함되고, 이는 같은 컴퓨터의 로컬 데이터베이스에 남습니다.</li>
+    <li>이용자가 설정 화면에서 <strong>연결 해제</strong>를 누르면 토큰 파일을 즉시 삭제합니다. Google 계정의 <a href="https://myaccount.google.com/permissions">보안 → 타사 앱 액세스</a>에서도 권한을 철회할 수 있습니다.</li>
+    <li>대화 기록은 이용자가 로컬 데이터베이스 파일을 지우면 함께 사라집니다.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h2>5. 제3자 제공</h2>
+  <p>이 앱은 Google 사용자 데이터를 판매하지 않고, 광고에 쓰지 않으며, 신용 평가나 그와 비슷한 목적에 쓰지 않습니다.</p>
+  <h3>언어 모델 제공자에게 전달되는 범위</h3>
+  <p>답변 문장을 만들려면 이용자의 질문과 그에 관련된 메일·일정 내용을 대규모 언어 모델 제공자의 API에 보내야 합니다. 이 과정에 대해 다음을 밝힙니다.</p>
+  <ul>
+    <li>전달은 <strong>이용자가 요청한 답변을 만드는 목적</strong>에 한합니다.</li>
+    <li>Google 사용자 데이터를 일반화된 인공지능·기계학습 모델의 <strong>학습에 사용하지 않습니다.</strong> 이용하는 API는 제공자의 약관상 전송 내용이 모델 학습에 쓰이지 않는 조건으로 호출합니다.</li>
+    <li>그 밖의 어떤 제3자에게도 Google 사용자 데이터를 넘기지 않습니다.</li>
+    <li>사람이 메일 내용을 읽는 일은 운영자 본인이 자기 화면에서 보는 경우뿐입니다.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h2>6. Google API Services User Data Policy 준수</h2>
+  <p>lifelongeek agent team이 Google API에서 받은 정보를 사용하고 전송할 때에는 <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>의 Limited Use 요건을 포함해 해당 정책을 따릅니다.</p>
+</div>
+
+<div class="card">
+  <h2>7. 안전 조치</h2>
+  <ul>
+    <li>앱 자체에 외부 인터넷에서 접근할 수 없습니다. 운영자의 사설 네트워크 안에서만 열리고, 통신 구간은 HTTPS로 암호화됩니다.</li>
+    <li>메일 본문과 일정 설명은 <strong>외부에서 온 데이터</strong>로 표시해 처리하며, 그 안에 섞여 있는 지시문은 따르지 않습니다.</li>
+    <li>일정 등록·수정은 <strong>이용자 본인이 보낸 메시지에 등록·수정을 요청하는 표현이 있을 때만</strong> 실행합니다. 메일 내용이 일정을 바꾸도록 유도할 수 없습니다.</li>
+    <li>토큰 파일과 푸시 알림 키 파일은 소유자 전용 권한(0600)으로 저장합니다.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h2>8. 이용자의 권리</h2>
+  <p>이용자는 언제든지 연결을 해제하고 저장된 자료를 삭제할 수 있습니다. 열람·정정·삭제 요청은 아래 주소로 보내 주세요.</p>
+  <p>ken.geonmin.kim@gmail.com</p>
+</div>
+
+<div class="card">
+  <h2>9. 방침 변경</h2>
+  <p>이 방침이 바뀌면 이 페이지를 고치고 아래 최종 수정일을 갱신합니다.</p>
+</div>
+
+<div class="en">
+  <h2>Privacy Policy (English)</h2>
+
+  <h3>1. Operator and scope</h3>
+  <p>This policy covers <strong>lifelongeek agent team</strong>, a personal application built and operated by an individual on their own computer. Operator and developer: Geonmin Kim (ken.geonmin.kim@gmail.com). The app is not offered to the public, has no sign-up, and its only user is the operator, connected to a single Google account — the operator's own.</p>
+
+  <h3>2. Scopes requested and why</h3>
+  <p>The app requests only four scopes and uses each one solely for the stated purpose. <code>gmail.readonly</code>: find, read and summarize messages the user asks about, and read the original thread before drafting a reply. <code>gmail.compose</code>: save a reply as a draft in Gmail; nothing is ever sent. <code>calendar.readonly</code>: produce daily briefings and answer schedule questions. <code>calendar.events</code>: create or reschedule an event only when the user directly asks. Broader scopes such as <code>gmail.send</code>, <code>gmail.modify</code> or calendar deletion are not requested, and those features are not implemented at all.</p>
+
+  <h3>3. Information processed</h3>
+  <p>Gmail: sender, subject, date and part of the body (up to 12,000 characters per thread) of messages relevant to the user's question. Google Calendar: title, time, location and description of events in the requested range. Account identifier: the connected account's email address, shown to indicate connection status. OAuth tokens: access and refresh tokens. The app collects no advertising identifiers, no location data and no contact lists.</p>
+
+  <h3>4. Storage and retention</h3>
+  <p>Everything is processed on the operator's own macOS computer; nothing is stored on an external server or cloud database. OAuth tokens are written to <code>data/google/token.json</code> with owner-only permissions (0600). Message bodies and event contents are used only while composing an answer and are not copied elsewhere; the on-screen chat history retains the agent's written answer in a local database on the same computer. Pressing <strong>Disconnect</strong> in the settings screen deletes the token file immediately, and access can also be revoked at <a href="https://myaccount.google.com/permissions">Google Account → Third-party access</a>. Chat history disappears when the user deletes the local database file.</p>
+
+  <h3>5. Third parties</h3>
+  <p>Google user data is never sold, never used for advertising, and never used for credit assessment or anything similar.</p>
+  <p><strong>Transfer to a language model provider.</strong> To compose an answer, the user's question and the related mail or calendar content are sent to a large language model provider's API. This transfer happens only to produce the answer the user asked for. Google user data is <strong>not used to develop or train generalized artificial intelligence or machine learning models</strong>; the API is called under terms where submitted content is not used for model training. No other third party receives Google user data. The only human who reads message contents is the operator, on their own screen.</p>
+
+  <h3>6. Google API Services User Data Policy</h3>
+  <p>lifelongeek agent team's use and transfer of information received from Google APIs to any other app will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+
+  <h3>7. Safeguards</h3>
+  <p>The app itself is not reachable from the public internet; it is served only inside the operator's private network, over HTTPS. Message bodies and event descriptions are handled as untrusted external data, and instructions embedded in them are never followed. Creating or changing a calendar event runs only when the user's own message contains a request to do so, so mail content cannot cause a schedule change. Token and push-notification key files are stored with owner-only permissions (0600).</p>
+
+  <h3>8. User rights</h3>
+  <p>The user may disconnect and delete stored data at any time. Requests to access, correct or delete data: ken.geonmin.kim@gmail.com</p>
+
+  <h3>9. Changes</h3>
+  <p>If this policy changes, this page is updated along with the effective date below.</p>
+</div>
+
+<footer class="site">
+  <a href="index.html">홈</a> · <a href="terms.html">서비스 약관</a><br>
+  시행일 / Effective 2026-11-22
+</footer>
+
+</div>
+</body>
+</html>
