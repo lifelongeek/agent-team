@@ -166,3 +166,6 @@ footer.site a { color: var(--muted); }
   .card { padding: 20px 18px; }
   header.site img { width: 52px; height: 52px; }
 }
+
+.card a, .en a { color: var(--blue); }
+.card a:hover, .en a:hover { text-decoration: none; }
