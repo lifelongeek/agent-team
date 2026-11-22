@@ -135,6 +135,8 @@ th { color: var(--muted); font-weight: 600; }
 
 td:first-child, th:first-child { width: 36%; }
 
+td:first-child code { white-space: nowrap; }
+
 .note {
   border-left: 3px solid var(--green);
   padding: 2px 0 2px 14px;
